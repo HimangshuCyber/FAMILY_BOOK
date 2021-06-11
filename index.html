@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himangshu's Family Book</title>
+</head>
+<body>
+    <div id="title">
+        <h1 id = "1">Introducing</h1>
+        <h2 id = "2">Himangshu's Family Book</h2>
+        <img id = "family_member_image" src="OIP.jpg">
+        <h2 id="family_member_name">The Family Book</h2>
+        <button onclick="update()">Next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1498394804/size=small/bgcol=ffffff/linkcol=de270f/track=1496757082/transparent=true/" seamless><a href="https://sleepytimejesse.bandcamp.com/album/i-miss-you-earthbound-2012">I Miss You - EarthBound 2012 by Toby Fox</a></iframe>
+    </div>
+
+    <style>
+        #title h1{
+            text-align: center;
+            font-size: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #title h2{
+            text-align: center;
+            font-size: 70px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #title img{
+            margin-left: 500px;
+            width: 500px;
+        }
+        button{
+            font-size: xx-large;
+            margin-left: 700px;
+        }
+    </style>
+
+    <script>
+            var images = ["Munmi.jpg","Nilutpal.JPG","Himangshu.JPG"];
+            var names = ["Munmi Saikia", "Nilutpal Saikia", "Himangshu Ranjan Saikia"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 2
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+    </script>
+</body>
+</html>
